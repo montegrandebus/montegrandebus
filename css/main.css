@@ -270,8 +270,7 @@ p {
   .logoplaystore__768 {
     animation: transitionInLogo 1.3s;
     display: unset;
-    margin-right: 15px;
-    bottom: 380px; }
+    margin-right: 15px; }
   .logo-playstore {
     border-radius: 15%;
     width: 60px; }
