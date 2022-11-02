@@ -138,6 +138,9 @@ p {
 .logomgb__768 {
     display: none;
 }
+.logoplaystore__768 {
+    display: none;
+}
 .header__li {
     display: contents;
         a {
@@ -271,6 +274,26 @@ p {
         display: unset;
         position: absolute;
         bottom: 280px;
+    }
+    .logoplaystore__menu {
+        /* margin: 400px 30px; */
+        margin: 568px 300px;
+        background-color: black;
+        width: 245px;
+        border-radius: 5px;
+    }
+    .p__logoplaystore {
+        height:63px;
+    }
+    .logoplaystore__768{
+        animation: transitionInLogo 1.3s;
+        display: unset;
+        margin-right: 15px;
+        bottom: 380px;
+    }
+    .logo-playstore {
+        border-radius: 15%;
+        width: 60px;
     }
     .nav__hamburguer,
     .nav__close {
