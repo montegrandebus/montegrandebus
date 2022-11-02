@@ -1,0 +1,450 @@
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    font-family: "Helvetica Neue", "Helvetica";
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: black;
+}
+/* Body grid */
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+/* madiea queris body */
+@media (max-width: 1241px) {
+    body {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "nav"
+            "main"
+            "header"
+            "footer";
+    }
+}
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "nav"
+            "main"
+            "header"
+            "footer";
+    }
+}
+@media (max-width: 550px) {
+    body {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "nav"
+            "main"
+            "header"
+            "footer";
+    }
+}
+@media (max-width: 400px) {
+    body {
+        display: grid;
+        justify-items: stretch;
+        gap: 10px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+}
+p {
+    color: map-get($letras, w);
+}
+/* Images */
+.header__logo{
+    margin: 0 auto;
+    margin-top: 24px;
+}
+.logomgb {
+    width: 320px;
+}
+.logo-facebook {
+    border-radius: 50%;
+    width: 60px;
+}
+.logo-instagram {
+    border-radius: 25%;
+    width: 60px;
+}
+.logo-playstore {
+    border-radius: 15%;
+    width: 60px;
+}
+/* container header */
+.header {
+    &__container{
+    background: $header-background;
+    border: $border-main;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 3px;
+    }
+    &__ul{
+        @include flex (flex, row, wrap, center, space-evenly);
+        margin: 20px auto;
+        list-style: none;
+    }
+    &__li{
+        margin-right: 10px;
+    }
+}
+.h2 {
+    background-color: black;
+    border: $border-main;
+    text-decoration: underline;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 120px 0;
+}
+/* nav */
+.container__nav {
+    width: 100%;
+    height: 600px;
+}
+.logomgb__768 {
+    display: none;
+}
+.header__li {
+    display: contents;
+        a {
+        display: flex;
+        align-items: end;
+        text-decoration: none;
+            p {
+            color: lightgray;
+            margin-bottom: 15px;
+            margin-left: 25px;
+        }
+    }
+}
+.descarga__apk {
+    margin: 0;
+}
+.nav-tabs {
+    background-position: center;
+    list-style: none;
+    width: 100%;
+}
+.nav__icon {
+    display: contents;
+}
+.nav-tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+    background-image: url(../img/navbackground/navbackground.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 1800px 600px;
+    padding-top: 550px;
+}
+.nav-tabs>.nav-item>.nav-link {
+    color: rgb(250, 250, 250);
+}
+.nav-tabs .nav-link.active {
+    background-image: url("../img/logo/fondocolorlogo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    width: 250px;
+}
+@media (max-width: 900px){
+    .header{
+        &__container {
+            display: none;
+        }
+        &__ul {
+            @include flex (flex, row, wrap, center, space-evenly);
+            margin: 30px auto;
+            list-style: none;
+        }
+    }
+    .logomgb {
+        position: absolute;
+        top: 500px;
+        width: 280px;
+    }
+    .logo-facebook {
+        border-radius: 50%;
+        width: 25px;
+    }
+    .logo-instagram {
+        border-radius: 25%;
+        width: 30px;
+    }
+    .header {
+        &__container{
+            height:60px;
+        }
+        &__ul {
+            margin: 10px auto;
+        }
+    }
+    .container__nav {
+        width: 100%;
+        max-width: 900px;
+        height:600px;
+        overflow: hidden;
+        background: url("../img/navbackground/navbackground.jpg");
+        background-position: center;
+        background-size: cover;
+        border: $border-main;
+    }
+    #obelisco {
+        background-image: url("../img/navbackground/hamburguesa.jpg");
+        background-position: left;
+        background-size: cover;
+        min-height: 900px;
+        height: 100vh;
+        color: #fff;
+        border: $border-main;
+    }
+    .nav-tabs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: flex-start;
+        transform: var(--state-menu);
+        transition: .2s transform;
+        transition-timing-function: ease-out;
+        z-index: 1;
+    }
+    .nav {
+        --state-menu: translate(-100%);
+        --state-close: scale(0);
+        --state-hamburguer: scale(1);
+        margin-top:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        grid-template-columns: repeat(2, max-content);
+    }
+    .nav:target {
+        --state-menu: translate(0);
+        --state-close: scale(1);
+        --state-hamburguer: scale(0);
+    }
+    .logomgb__768 {
+        animation: transitionInLogo 1.3s;
+        display: unset;
+        position: absolute;
+        bottom: 280px;
+    }
+    .nav__hamburguer,
+    .nav__close {
+        cursor: pointer;
+        grid-column: -2/-1;
+        grid-row: 1/2;
+        transition: .5s transform;
+        z-index: 1;
+    }
+    .nav__hamburguer {
+        position: absolute;
+        top: 45px;
+        right: 25px;
+        transform: var(--state-hamburguer);
+    }
+    .nav__close {
+        position: absolute;
+        top: 45px;
+        right: 25px;
+        transform: var(--state-close);
+    }
+    .nav__icon {
+        background-color: black;
+        border-radius: 15%;
+        width: 40px;
+        display: unset;
+    }
+   
+    .nav-item {
+        margin: 30px;
+        list-style: none;
+    }
+    .nav-link {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    
+    .nav-tabs .nav-link.active {
+        color: white;
+        background-color: #ff00;;
+        background-image: url("../img/logo/fondocolorlogo.jpg");
+        border-image: $main-background;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 1%;
+        text-align: center;
+    }
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tab-content>.active {
+    display: none;
+}
+/* footer */
+.footer {
+    background: #152F4F;
+    border: $border-main;
+    padding: 50px;
+    color: white;
+        &__h2-modificador {
+            margin-top: 50px;
+        }
+        &__link {
+            @include flex(flex, row, wrap, center, space-around);
+            margin: 30px 0;
+        }
+}
+.about-company {
+    h2 {
+        color: map-get($letras, w);
+    }
+}
+.direccion__caba {
+    display: flex;
+    color: map-get($letras, w);
+}
+.location {
+    h4 {
+        color: map-get($letras, w);
+    }
+}
+.copyright {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.fa {
+    &__social {
+        @include flex(flex, column, wrap, center, space-evenly);
+        height: 85px;
+        overflow: hidden;
+    }
+    &__face {
+        display: table;
+        background-color: map-get($letras, w);
+        color: #0055fff0;
+        border-radius: 25%;
+        z-index: 15;
+    }
+    &__insta {
+        border-radius: 41%;
+        color: white;
+        background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    }
+}
+
+.boton__consultar {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    left: 5px;
+}
+/* madia queries footer */
+@media (max-width: 768px) {
+    .footer {
+        @include flex (flex, row, wrap, center, center);
+        border: $border-main;
+        height: auto;
+        margin: 50px auto;
+            &__link {
+            flex-direction: column;
+        }
+    }
+    .fa__face {
+        overflow: hidden;
+    }
+}
+@media (max-width: 400px) {
+    .footer {
+        @include flex (flex, row, wrap, center, center);
+        border: $border-main;
+        height: auto;
+    }
+}
+/* animation main*/
+main,
+.container__form {
+    animation: transitionIn 1.5s;
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-15deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+.logomgb, .header__ul {
+    animation:transitionInLogo 1.3s;
+}
+@keyframes transitionInLogo {
+    from {
+        opacity: .5;
+        transform: scale(.7);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0deg);
+        transform: scale(1);
+    }
+}
+/* fa de WahtssApp */
+.fa-whatsapp {
+    color : white;
+}
+.whatsapp__anchor {
+    color :#03c100;
+}

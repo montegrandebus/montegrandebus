@@ -1,0 +1,117 @@
+/* grid servicios */
+.main__servicios {
+    grid-area: main;
+}
+/* servicos */
+.container__servicios {
+    @extend %main;
+    padding: 50px;
+    &__h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+}
+.iframe__creado {
+    height: 700px;
+    width: 80%;
+}
+.iframe__direccion {
+    width: 80%;
+}
+.iframe__sucursal{
+    margin: 30px 0;
+}
+.column__servicios_margintop {
+    margin-top:40px;
+}
+/* container servicio capital */
+.container__servicio__capital {
+    @extend %main ;
+    padding:50px;
+    h1 {
+        margin-top: 25px;
+    }
+    &__h2{
+        margin-top: 30px;
+        text-align: center;
+    }
+    &__row {
+        @include flex (flex, row, wrap, flex-start, space-around);
+        margin-top: 50px;
+    }
+    &__ul {
+        margin-top: 50px;
+        list-style: none;
+    }
+  
+}
+.servicios__mapa {
+    height: 550px;
+    width: 400px;
+    &__1 {
+        margin-top: 88px;
+    }
+}
+/* media queris servicios */
+@media (max-width:1200px) {
+    .container__servicio__capital__row {
+        @include flex (flex, row ,wrap, center, space-around);
+    }
+    .container__servicio__row__h {
+        margin-bottom: 40px;
+    }
+    .iframe__creado {
+    height: 700px;
+    width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .container__servicio__capital {
+        @include flex (flex, column, wrap, center, space-around);
+        text-decoration: none;
+        padding: 0;
+        padding-bottom: 30px;
+        &__ul {
+            margin-left: -50px;
+            text-align: center;
+        }
+    }
+    .container__servicio__row__h {
+        margin-top: 20px;
+    }
+    .servicios__mapa {
+        max-width: 360px;
+        padding: 40px;
+    }
+    .col-md-6 {
+        width: 100%;
+        text-align: center;
+    } 
+    
+}
+@media (max-width: 600px) {
+    .container__servicios {
+        display: block;
+        padding: 10px;
+    }
+    .container__servicios__row {
+        margin-top:550px;
+    }
+    .iframe__creado {
+    height: 700px;
+    width: 90%;
+    }
+    .col-ms-12 {
+        width: 100%;
+        text-align: center;
+    } 
+}
+

@@ -1,0 +1,60 @@
+/* grid contactos */
+.main__contacto {
+    grid-area: main;
+}
+/* Contacto */
+.container{
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    &__btn {
+    display: flex;
+    }
+    &__form {
+        @extend %main;
+        padding-bottom: 50px;
+        h1 {
+            color: map-get($letras, w);
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+      
+    }
+}
+.p__contactenos {
+    padding:50px;
+}
+.form-floating {
+    margin-bottom: 15px;
+}
+.row {
+    justify-content: center;
+}
+textarea {
+    padding: 20px;
+    border-radius: 10px;
+}
+.contacto__text {
+    @include flex( flex, row, wrap, center ,center );
+    margin: 20px 0; 
+}
+.form__opcion {
+    color: map-get($letras,w);
+}
+.btn__contacto {
+    @extend %boton;
+    display: inline-block;
+    color: map-get($letras, w);
+    width: 200px;
+    margin-bottom: 50px;;
+}
+@media (max-width: 768px) {
+    #form {
+        align-content: inherit;
+    }
+}
