@@ -261,7 +261,6 @@ p {
     bottom: 310px; }
   .logoplaystore__menu {
     animation: transitionInLogo 1.3s;
-    margin: 525px 10px;
     background-color: black;
     width: 239px;
     border-radius: 5px; }
