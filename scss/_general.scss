@@ -261,8 +261,8 @@ p {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
         grid-template-columns: repeat(2, max-content);
+        align-content: flex-end;
     }
     .nav:target {
         --state-menu: translate(0);
@@ -272,7 +272,6 @@ p {
     .logomgb__768 {
         animation: transitionInLogo 1.3s;
         display: unset;
-        position: absolute;
         bottom: 220px;
     }
  
