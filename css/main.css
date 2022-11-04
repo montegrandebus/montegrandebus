@@ -263,6 +263,8 @@ p {
     background-color: black;
     width: 239px;
     border-radius: 5px; }
+  .logoplaystore__menu a {
+    text-decoration: none; }
   .p__logoplaystore {
     height: 63px; }
   .logoplaystore__768 {
