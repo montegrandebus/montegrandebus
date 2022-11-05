@@ -870,10 +870,12 @@ textarea {
   color: white;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 100px; }
+  margin-bottom: 50px; }
 
 .main__horario__p {
-  padding: 30px; }
+  padding: 30px;
+  border: 1px solid;
+  border-color: red; }
 
 .main__horario__h3 {
   color: white;

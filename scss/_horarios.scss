@@ -9,11 +9,13 @@
         color: map-get($letras, w);
         text-align: center;
         margin-top: 50px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     
     &__p {
         padding:30px;
+        border: 1px solid;
+        border-color: red;
     }
     &__h3 {
         color: map-get($letras,w);
