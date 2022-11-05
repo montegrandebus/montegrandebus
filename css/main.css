@@ -895,7 +895,7 @@ textarea {
   margin-bottom: 25px; }
 
 @media (max-width: 768px) {
-  .col-md-6 {
+  .li__left {
     width: 100%;
     text-align: initial; } }
 
