@@ -13,7 +13,7 @@
   .button__reserva a, .btn__contacto a {
     color: white; }
 
-.container__servicios, .container__servicio__capital, #galeria, .main__reserva, .container__main__quienes__somos, .container__form {
+.container__servicios, .container__servicio__capital, #galeria, .main__reserva, .container__main__quienes__somos, .container__form, .main__horario {
   background: linear-gradient(to bottom right, #1fafd1, #05138e, #05138ec2, #1fafd1);
   border: 2px solid blue;
   color: white;
@@ -860,3 +860,47 @@ textarea {
 @media (max-width: 768px) {
   #form {
     align-content: inherit; } }
+
+/* grid horario tu lugar */
+.main__horario {
+  grid-area: main; }
+
+/* main */
+.main__horario__h1 {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px; }
+
+.main__horario__p {
+  padding: 30px; }
+
+.main__horario__h3 {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px; }
+
+.horario_rojo {
+  color: red; }
+
+.li__horarios {
+  padding: 5px 0; }
+
+/* contenedor de QR */
+.d-flex {
+  flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .main__horario__row {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    width: 320px; }
+  .main__horario__h1 {
+    font-size: 2em; }
+  .main__horario__p {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0; } }

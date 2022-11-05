@@ -1,0 +1,56 @@
+/* grid horario tu lugar */
+.main__horario {
+    grid-area: main;
+}
+/* main */
+.main__horario {
+    @extend %main;
+    &__h1{
+        color: map-get($letras, w);
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    
+    &__p {
+        padding:30px;
+    }
+    &__h3 {
+        color: map-get($letras,w);
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+}
+.horario_rojo {
+    color : red;
+}
+.li__horarios {
+    padding: 5px 0;
+}
+
+/* contenedor de QR */
+.d-flex {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .main__horario__row {
+        display: flex;
+        justify-content: space-around;
+        padding:0;
+        width: 320px;
+       
+    }    
+    .main__horario {
+        &__h1{
+        font-size: 2em;
+        }
+        &__p {
+            font-size:map-get($letras,t2);
+            text-align: center;
+            margin-top: 30px;
+            padding:0;
+        }
+    }
+}
