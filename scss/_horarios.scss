@@ -33,7 +33,15 @@
 .d-flex {
     flex-wrap: wrap;
 }
-
+.col-sm-6 {
+    margin-bottom: 25px;;
+}
+@media (max-width: 768px){
+    .col-md-6 {
+        width: 100%;
+        text-align: initial;
+    }
+}
 @media (max-width: 600px) {
     .main__horario__row {
         display: flex;
