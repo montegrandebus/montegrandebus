@@ -16,6 +16,7 @@
         padding:30px;
         border: 1px solid;
         border-color: red;
+        margin-top: 30px;
     }
     &__h3 {
         color: map-get($letras,w);
@@ -35,7 +36,9 @@
 .d-flex {
     flex-wrap: wrap;
 }
-
+.row p {
+    height:5px;
+}
 @media (max-width: 768px){
     .li__left{
         width: 100%;
@@ -45,9 +48,7 @@
         margin-bottom: 25px;;
     }
 }
-.row p {
-    height:5px;
-}
+
 @media (max-width: 600px) {
     .main__horario__row {
         display: flex;
