@@ -17,6 +17,13 @@
     "url": "https://github.com/rdavid1986/Monte-Grande-Bus/issues"
   },
   "homepage": "https://github.com/rdavid1986/Monte-Grande-Bus#readme",
+<<<<<<< HEAD
   "devDependencies": {},
+=======
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  },
+>>>>>>> 44ec82d1483e75ac42c8002800a0d22eecc96212
   "description": ""
 }
